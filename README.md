@@ -8,7 +8,7 @@
 ## Key Feature
 - **Dark mode**
 - **Responsive layout**
-- **Smooth Scroll
+- **Smooth Scroll**
 
 ## Tech Stack
 - **HTML**
