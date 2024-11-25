@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="shortcut icon" href="./assets/brand/favicon.svg" type="image/x-icon">
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <script>
+            if (
+                localStorage.getItem('color-theme') === 'dark' ||
+                (!('color-theme' in localStorage) &&
+                    window.matchMedia('(prefers-color-scheme: dark)').matches)
+            ) {
+                document.documentElement.classList.add('dark')
+            } else {
+                document.documentElement.classList.remove('dark')
+            }
+        </script>
+        <script src="./js/script.js" defer></script>
+        <title>Fylo</title>
+    </head>
+
+    <body class="bg-white dark:bg-zinc-900">
+        <header>
+            <nav>
+                <div class="text-zinc-900 dark:text-zinc-200 flex flex-col md:flex-row gap-6 md:gap-0 items-center justify-between p-10">
+                    <div>
+                        <a href="#">
+                            <svg class="fill-zinc-900 dark:fill-zinc-200 h-8" viewBox="0 0 1279 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1010.02 393.617C987.68 393.617 971.546 388.653 961.617 378.723C952.042 368.794 947.255 353.192 947.255 331.915V0H1011.62V342.021H1043.53V393.617H1010.02ZM1162.46 400C1125.58 400 1096.85 388.298 1076.29 364.894C1056.07 341.49 1045.97 304.788 1045.97 254.788C1045.97 204.788 1056.07 168.086 1076.29 144.681C1096.85 121.277 1125.58 109.575 1162.46 109.575C1199.34 109.575 1227.88 121.277 1248.09 144.681C1268.66 168.086 1278.95 204.788 1278.95 254.788C1278.95 304.788 1268.66 341.49 1248.09 364.894C1227.88 388.298 1199.34 400 1162.46 400ZM1162.46 347.873C1195.08 347.873 1211.39 328.724 1211.39 290.426V219.149C1211.39 180.852 1195.08 161.703 1162.46 161.703C1129.83 161.703 1113.52 180.852 1113.52 219.149V290.426C1113.52 328.724 1129.83 347.873 1162.46 347.873ZM933.745 115.958H869.383L828.958 265.426L814.064 338.83H807.681L792.788 265.958L751.298 115.958H685.873L778.426 409.043L767.256 448.405H712.469V500H756.086C775.944 500 791.369 496.632 802.362 489.894C813.355 483.156 821.866 470.39 827.894 451.596L933.745 115.958ZM477.969 393.617V22.3408H694.99V80.3195H544.458V177.128H674.777V233.511H544.458V393.617H477.969ZM33.7601 224.933H371.361C380.315 224.933 388.902 228.488 395.233 234.814C401.564 241.141 405.121 249.722 405.121 258.67V359.88C405.121 368.827 401.564 377.409 395.233 383.735C388.902 390.062 380.315 393.617 371.361 393.617H33.7601C24.8064 393.617 16.2194 390.062 9.8881 383.735C3.55686 377.409 0 368.827 0 359.88V258.67C0 249.722 3.55686 241.141 9.8881 234.814C16.2194 228.488 24.8064 224.933 33.7601 224.933ZM33.7601 359.88H371.361V258.67H33.7601V359.88ZM33.7601 22.5132H371.361C380.315 22.5132 388.902 26.0676 395.233 32.3944C401.564 38.7213 405.121 47.3023 405.121 56.2499V157.46C405.121 166.407 401.564 174.988 395.233 181.315C388.902 187.642 380.315 191.197 371.361 191.197H33.7601C24.8064 191.197 16.2194 187.642 9.8881 181.315C3.55686 174.988 0 166.407 0 157.46V56.2499C0 47.3023 3.55686 38.7213 9.8881 32.3944C16.2194 26.0676 24.8064 22.5132 33.7601 22.5132ZM33.7601 157.46H371.361V56.2499H33.7601V157.46ZM333.334 120.912C336.116 116.751 337.601 111.859 337.601 106.855C337.601 100.144 334.933 93.7084 330.185 88.9633C325.437 84.2182 318.996 81.5524 312.281 81.5524C307.273 81.5524 302.378 83.0363 298.214 85.8166C294.05 88.5969 290.805 92.5486 288.888 97.172C286.972 101.795 286.47 106.883 287.447 111.791C288.424 116.699 290.836 121.208 294.377 124.746C297.918 128.285 302.43 130.695 307.341 131.671C312.253 132.648 317.344 132.146 321.971 130.231C326.597 128.316 330.552 125.073 333.334 120.912ZM333.334 323.332C336.116 319.171 337.601 314.279 337.601 309.275C337.601 302.564 334.933 296.129 330.185 291.383C325.437 286.638 318.996 283.972 312.281 283.972C307.273 283.972 302.378 285.456 298.214 288.237C294.05 291.017 290.805 294.969 288.888 299.592C286.972 304.216 286.47 309.303 287.447 314.211C288.424 319.119 290.836 323.628 294.377 327.166C297.918 330.705 302.43 333.115 307.341 334.091C312.253 335.068 317.344 334.566 321.971 332.651C326.597 330.736 330.552 327.493 333.334 323.332Z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <ul class="flex items-center gap-8 text-xl">
+                        <li class="hover:text-zinc-500 dark:hover:text-zinc-300 transition-all duration-300">
+                            <a href="#features">Features</a>
+                        </li>
+                        <li class="hover:text-zinc-500 dark:hover:text-zinc-300 transition-all duration-300">
+                            <a href="#testimonial">Testimonials</a>
+                        </li>
+                        <li>
+                            <div id="modeButton" class="cursor-pointer rounded-md h-10 w-10 active:border-2 active:border-zinc-300 dark:active:border-zinc-500 hover:bg-zinc-100 dark:hover:bg-zinc-100/10 flex items-center justify-center">
+                                <i class="ph ph-sun text-xl dark:block hidden"></i>
+                                <i class="ph ph-moon text-xl dark:hidden block"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- Hero section -->
+            <section class="pt-10 md:pt-20">
+                <img class="xl:h-500 w-full dark:block hidden" src="./assets/hero_img_dark.svg" alt="">
+                <img class="xl:h-500 w-full dark:hidden block" src="./assets/hero_img_light.svg" alt="">
+            </section>
+            <!-- Features section -->
+            <section class="relative bg-zinc-50 dark:bg-zinc-800 py-8 pb-24 space-y-32">
+                <!-- title section -->
+                <div class="text-zinc-900 dark:text-zinc-200 text-center space-y-6 px-6">
+                    <h1 class="text-3xl md:text-4xl md:max-w-xl mx-auto tracking-tight font-medium capitalize">All your files in one secure location, assessible anywhere.</h1>
+                    <p class="md:text-lg md:max-w-2xl mx-auto">Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers.</p>
+                    <a class="h-11 w-fit mx-auto px-6 rounded-full flex items-center justify-center bg-blue-600 text-white hover:bg-blue-500" href="#">Get Started</a>
+                </div>
+                <!-- Features grid -->
+                <div id="features" class="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 md:gap-16 xl:gap-40 px-8 text-zinc-900 dark:text-zinc-200">
+                    <!-- first section -->
+                    <div class="flex flex-col gap-4">
+                        <div class="flex justify-center">
+                            <img src="./assets/icon-access-anywhere.svg" alt="">
+                        </div>
+                        <div class="text-center space-y-4">
+                            <h3 class="text-2xl tracking-tight font-medium">Access your file from anywhere</h3>
+                            <p>The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.</p>
+                        </div>
+                    </div>
+                    <!-- second section -->
+                    <div class="flex flex-col gap-4">
+                        <div class="flex justify-center">
+                            <img src="./assets/icon-security.svg" alt="">
+                        </div>
+                        <div class="text-center space-y-4">
+                            <h3 class="text-2xl tracking-tight font-medium">Security you can trust</h3>
+                            <p>2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.</p>
+                        </div>
+                    </div>
+                    <!-- third section -->
+                    <div class="flex flex-col gap-4">
+                        <div class="flex justify-center">
+                            <img src="./assets/icon-collaboration.svg" alt="">
+                        </div>
+                        <div class="text-center space-y-4">
+                            <h3 class="text-2xl tracking-tight font-medium">Access your file from anywhere</h3>
+                            <p>The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.</p>
+                        </div>
+                    </div>
+                    <!-- fourth section -->
+                    <div class="flex flex-col gap-4">
+                        <div class="flex justify-center">
+                            <img src="./assets/icon-any-file.svg" alt="">
+                        </div>
+                        <div class="text-center space-y-4">
+                            <h3 class="text-2xl tracking-tight font-medium">Security you can trust</h3>
+                            <p>2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Stay productive section -->
+            <section class="p-6 md:p-16">
+                <div class="max-w-6xl mx-auto flex flex-col xl:flex-row gap-16 xl:gap-24">
+                    <div class="flex justify-center flex-none w-full xl:w-500">
+                        <img class="md:w-500 dark:block hidden" src="./assets/access_img_dark.svg" alt="">
+                        <img class="md:w-500 dark:hidden block" src="./assets/access_img_light.svg" alt="">
+                    </div>
+                    <div class="text-zinc-900 dark:text-zinc-200 space-y-8 max-w-xl mx-auto flex flex-col justify-center md:text-center md:items-center xl:text-left xl:items-start">
+                        <h2 class="text-3xl md:text-5xl tracking-tight font-medium max-w-xl">Stay productive, wherever you are</h2>
+                        <p class="md:text-lg">Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</p>
+                        <p class="md:text-lg">Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
+                        <div class="text-blue-600 dark:text-blue-500 flex gap-2 hover:border-b border-blue-500 w-max transition-all">
+                            <a class="inline-block" href="#">See how Flyo works</a>
+                            <span class="flex items-center"><i class="ph ph-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Testimonial section -->
+            <section id="testimonial" class="py-16 relative p-6 md:p-16 mt-16 mb-56">
+                <img class="absolute left-6 top-0 h-20 md:h-24" src="./assets/Quote.svg" alt="">
+                <div class="flex flex-col xl:flex-row gap-6 justify-between z-10 relative">
+                    <!-- First testimonial -->
+                    <div class="text-zinc-900 dark:text-zinc-200 space-y-6 bg-zinc-100 dark:bg-zinc-800 p-10 rounded-xl">
+                        <!-- Quote -->
+                        <p class="text-xl">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
+                        <!-- User info -->
+                        <div class="flex gap-2 items-center">
+                            <div class="h-12 w-12 rounded-full overflow-hidden">
+                                <img class="object-cover" src="./assets/profiles/profile_2.png" alt="">
+                            </div>
+                            <div class="">
+                                <h3 class="font-medium">Satish Patel</h3>
+                                <div class="text-zinc-500 dark:text-zinc-300 text-xs">Founder & CEO, Huddle</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- second testimonial -->
+                    <div class="text-zinc-900 dark:text-zinc-200 space-y-6 bg-zinc-100 dark:bg-zinc-800 p-10 rounded-xl">
+                        <!-- Quote -->
+                        <p class="text-xl">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
+                        <!-- User info -->
+                        <div class="flex gap-2 items-center">
+                            <div class="h-12 w-12 rounded-full overflow-hidden">
+                                <img class="object-cover" src="./assets/profiles/profile_3.png" alt="">
+                            </div>
+                            <div class="">
+                                <h3 class="font-medium">Bruce McKenzie</h3>
+                                <div class="text-zinc-500 dark:text-zinc-300 text-xs">Founder & CEO, Huddle2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- third testimonial -->
+                    <div class="text-zinc-900 dark:text-zinc-200 space-y-6 bg-zinc-100 dark:bg-zinc-800 p-10 rounded-xl">
+                        <!-- Quote -->
+                        <p class="text-xl">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
+                        <!-- User info -->
+                        <div class="flex gap-2 items-center">
+                            <div class="h-12 w-12 rounded-full overflow-hidden">
+                                <img class="object-cover" src="./assets/profiles/profile_1.png" alt="">
+                            </div>
+                            <div class="">
+                                <h3 class="font-medium">Eva Boyd</h3>
+                                <div class="text-zinc-500 dark:text-zinc-300 text-xs">Founder & CEO, Huddle3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- footer section -->
+        <footer class="bg-zinc-100 dark:bg-zinc-950 p-6 md:p-16 space-y-32 md:space-y-44">
+            <!-- Newsletter -->
+            <div class="bg-zinc-200 dark:bg-zinc-800 p-10 text-center text-zinc-900 dark:text-zinc-200 max-w-2xl mx-auto space-y-6 -mt-44 rounded-xl">
+                <h3 class="text-3xl tracking-tight font-medium">Get early access today</h3>
+                <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
+                <div>
+                    <form action="#" method="get" class="flex flex-col md:flex-row gap-4 md:gap-2 items-center">
+                        <input type="email" placeholder="Email address" required class="md:flex-1 w-full h-12 px-4 rounded-sm dark:bg-zinc-900 border border-zinc-400 dark:border-zinc-700 outline-zinc-700">
+                        <button type="submit" class="h-11 bg-blue-600 w-full md:w-fit text-white hover:bg-blue-500 px-4 rounded-md">Get started for free</button>
+                    </form>
+                </div>
+            </div>
+            <!-- footer menu -->
+            <div class="text-zinc-900 dark:text-zinc-200 flex flex-col md:flex-row gap-12 md:gap-0 justify-between">
+                <!-- Contact -->
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <i class="ph ph-phone text-2xl"></i>
+                        <div>+1-543-123-4567</div>
+                    </div>
+                    <div class="flex gap-4">
+                        <i class="ph ph-envelope-simple text-2xl"></i>
+                        <div>e.mail@fylo.com</div>
+                    </div>
+                </div>
+                <!-- Links -->
+                <div class="flex gap-16">
+                    <div>
+                        <ul class="space-y-4">
+                            <li>
+                                <a href="#">About</a>
+                            </li>
+                            <li>
+                                <a href="#">Jobs</a>
+                            </li>
+                            <li>
+                                <a href="#">Press</a>
+                            </li>
+                            <li>
+                                <a href="#">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="space-y-4">
+                            <li>
+                                <a href="#">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="#">Terms</a>
+                            </li>
+                            <li>
+                                <a href="#">Privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Socials -->
+                <div class="flex justify-center md:justify-start flex-row md:flex-col gap-6">
+                    <div class="h-12 w-12 bg-zinc-50 dark:bg-zinc-800 hover:bg-zinc-300 dark:hover:bg-zinc-700 rounded-full flex items-center justify-center cursor-pointer">
+                        <a href="#">
+                            <svg class="fill-zinc-700 dark:fill-zinc-200 h-5 w-5" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50">
+                                <path d="M32,11h5c0.552,0,1-0.448,1-1V3.263c0-0.524-0.403-0.96-0.925-0.997C35.484,2.153,32.376,2,30.141,2C24,2,20,5.68,20,12.368 V19h-7c-0.552,0-1,0.448-1,1v7c0,0.552,0.448,1,1,1h7v19c0,0.552,0.448,1,1,1h7c0.552,0,1-0.448,1-1V28h7.222 c0.51,0,0.938-0.383,0.994-0.89l0.778-7C38.06,19.518,37.596,19,37,19h-8v-5C29,12.343,30.343,11,32,11z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="h-12 w-12 bg-zinc-50 dark:bg-zinc-800 hover:bg-zinc-300 dark:hover:bg-zinc-700 rounded-full flex items-center justify-center cursor-pointer">
+                        <a href="#">
+                            <svg class="fill-zinc-700 dark:fill-zinc-200 h-5 w-5" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50">
+                                <path d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="h-12 w-12 bg-zinc-50 dark:bg-zinc-800 hover:bg-zinc-300 dark:hover:bg-zinc-700 rounded-full flex items-center justify-center cursor-pointer">
+                        <a href="#">
+                            <svg class="fill-zinc-700 dark:fill-zinc-200 h-7 w-7" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 32 32">
+                                <path d="M 11.46875 5 C 7.917969 5 5 7.914063 5 11.46875 L 5 20.53125 C 5 24.082031 7.914063 27 11.46875 27 L 20.53125 27 C 24.082031 27 27 24.085938 27 20.53125 L 27 11.46875 C 27 7.917969 24.085938 5 20.53125 5 Z M 11.46875 7 L 20.53125 7 C 23.003906 7 25 8.996094 25 11.46875 L 25 20.53125 C 25 23.003906 23.003906 25 20.53125 25 L 11.46875 25 C 8.996094 25 7 23.003906 7 20.53125 L 7 11.46875 C 7 8.996094 8.996094 7 11.46875 7 Z M 21.90625 9.1875 C 21.402344 9.1875 21 9.589844 21 10.09375 C 21 10.597656 21.402344 11 21.90625 11 C 22.410156 11 22.8125 10.597656 22.8125 10.09375 C 22.8125 9.589844 22.410156 9.1875 21.90625 9.1875 Z M 16 10 C 12.699219 10 10 12.699219 10 16 C 10 19.300781 12.699219 22 16 22 C 19.300781 22 22 19.300781 22 16 C 22 12.699219 19.300781 10 16 10 Z M 16 12 C 18.222656 12 20 13.777344 20 16 C 20 18.222656 18.222656 20 16 20 C 13.777344 20 12 18.222656 12 16 C 12 13.777344 13.777344 12 16 12 Z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
